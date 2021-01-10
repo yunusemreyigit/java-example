@@ -12,38 +12,38 @@ import javax.swing.plaf.synth.SynthOptionPaneUI;
 //import sun.awt.AWTAccessor.SystemTrayAccessor;
 
 
- class Car {
-    private int whell,speed;
-    private String color,name;
+//  class Car {
+//     private int whell,speed;
+//     private String color,name;
 
-    public Car(){
-        this(0,0,"yok","yok");
-    }
-    public Car(int whell,int speed,String color,String name)
-    {
-        this.whell = whell;
-        this.speed = speed;
-        this.color = color;
-        this.name = name;
-        System.out.println("this reference : " + this);
-    }
-    // void SetCarİnfo(int whell, int speed, String color,String name)
-    // {
-    //     this.name = name;
-    //     this.speed = speed;
-    //     this.whell = whell;
-    //     this.color = color;
-    // }
-    void GetCarİnfo()
-    {
+//     public Car(){
+//         this(0,0,"yok","yok");
+//     }
+//     public Car(int whell,int speed,String color,String name)
+//     {
+//         this.whell = whell;
+//         this.speed = speed;
+//         this.color = color;
+//         this.name = name;
+//         System.out.println("this reference : " + this);
+//     }
+//     // void SetCarİnfo(int whell, int speed, String color,String name)
+//     // {
+//     //     this.name = name;
+//     //     this.speed = speed;
+//     //     this.whell = whell;
+//     //     this.color = color;
+//     // }
+//     void GetCarİnfo()
+//     {
 
-        System.out.println("What is its name ? : "+name);
-        System.out.println("How many whells has car ? : "+whell);
-        System.out.println("How speed is the car ? : "+speed);
-        System.out.println("What color is the car ? : "+color);
-    }
+//         System.out.println("What is its name ? : "+name);
+//         System.out.println("How many whells has car ? : "+whell);
+//         System.out.println("How speed is the car ? : "+speed);
+//         System.out.println("What color is the car ? : "+color);
+//     }
 
-}
+// }
 //  class FinalDemo{
 //     public final void display()
 //     {

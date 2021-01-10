@@ -1,51 +1,68 @@
-import java.util.jar.Attributes.Name;
-
-class People
-{   
-    String name;
-    int money,age;
-    
-    void Eat()
-    {
-        System.out.println("I am eating.");
-    }
-    void Earn()
-    {
-        System.out.println("I am earning money at the right now");
-    }
-    void Walk()
-    {
-        System.out.println("I am walking.");
-    }
-    void Idle()
-    {
-        System.out.println("I am waiting.");
-    }
-}
-
-class Warrior extends People
+class Vehicle
 {
- @Override
- void Earn()
- {
-     super.Earn();
-     super.money +=25;
- }
-}
+    int speed;
+    int price;
+    int capacity;
+    boolean is_working()
+    {
+        return true;
+    }
 
+    void getVehicleInfo()
+    {
+        System.out.println("Speed : "+speed);
+        System.out.println("Price : "+price);
+        System.out.println("Capacity : "+capacity);
+    }
+
+}
+class Car extends Vehicle
+{
+    int number_of_whells;
+    int number_of_doors;
+
+    Car(int now,int nod,int speed,int price,int capacity)
+    {
+        number_of_doors = nod;
+        number_of_whells = now;
+        super.speed = speed;
+        super.price = price;
+        super.capacity = capacity;
+    }
+    @Override
+    void getVehicleInfo() {
+        // TODO Auto-generated method stub
+        super.getVehicleInfo();
+        System.out.println("Number of doors : "+number_of_doors);
+        System.out.println("Number of whells : "+number_of_whells);
+    }
+}
+class Motorcycle extends Vehicle
+{
+    int number_of_whells;
+
+    
+    Motorcycle(int now,int speed,int price,int capacity)
+    {
+        number_of_whells = now;
+        super.speed = speed;
+        super.price = price;
+        super.capacity = capacity;
+    }
+    @Override
+    void getVehicleInfo() {
+        // TODO Auto-generated method stub
+        super.getVehicleInfo();
+        System.out.println("Number of whells : "+number_of_whells);
+    }
+}
 
 public class Inheritance_ex {
     public static void main(String[] args) {
-        Warrior necati = new Warrior();
-        Warrior asli = new Warrior();
+        Car car1 = new Car(4,4,270,15000,5);
+        Motorcycle motorcycle = new Motorcycle(2,450,27000,1);
 
-        necati.name = "Necati";
-        necati.age = 20;
-        necati.money = 5;
-        necati.Idle();
-        necati.Earn();
-        System.out.println("Money :"+necati.money);
-        System.out.println("Aslı Money : "+asli.money);
-
+        car1.getVehicleInfo();
+        motorcycle.getVehicleInfo();
     }
 }
